@@ -132,3 +132,6 @@ const sum1=product.forEach(pd=>{
 
 
 alert();
+
+
+
