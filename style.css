@@ -1,0 +1,22 @@
+.box{
+    height: 200px;
+    width: 200px;
+    border: 4px,black,solid;
+    padding: 20px;
+}
+
+.box-container{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+input{
+    padding: 20px;
+    margin: 5px,black,solid;
+    font-size: 20px;
+}
+button{
+    height: 50px;
+    width: 70px;
+}
