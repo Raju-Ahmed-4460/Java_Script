@@ -20,3 +20,16 @@ button{
     height: 50px;
     width: 70px;
 }
+
+.user{
+    height: 150px;
+    border: 5px,black,solid;
+    margin: 5px;
+    width: 150px;
+    padding: 20px;
+}
+
+.user-container{
+    display: flex;
+    justify-content: center;
+}

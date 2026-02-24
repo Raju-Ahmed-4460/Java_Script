@@ -32,35 +32,93 @@
 // }
 
 
+// document.getElementById("handleadd").addEventListener("click",(event)=>{
+//     const val=document.getElementById("searchbox").value ;
+
+//     const comment=document.getElementById("comment-container");
+
+//     const p=document.createElement("p");
+//      p.classList.add("child");
+
+//      p.innerText=val;
+        
+//      comment.append(p);
+    
+//        const allcomment=document.getElementsByClassName("child");
+        
+
+//      document.getElementById("searchbox").value="";
+
+//      for(const element of allcomment){
+//         element.addEventListener("click",(e)=>{
+//             e.target.parentNode.removeChild(element);
+//         })
+//      }
+
+
+// })
+
 document.getElementById("handleadd").addEventListener("click",(event)=>{
     const val=document.getElementById("searchbox").value ;
 
     const comment=document.getElementById("comment-container");
 
     const p=document.createElement("p");
-     p.classList.add("child");
 
-     p.innerText=val;
-        
-     comment.append(p);
-    
-       const allcomment=document.getElementsByClassName("child");
-        
+    p.classList.add("child");
 
-     document.getElementById("searchbox").value="";
+    p.innerText=val;
 
-     for(const element of allcomment){
+    comment.append(p);
+
+    const allcomment=document.getElementsByClassName("child");
+
+    document.getElementById("searchbox").value ="";
+
+    for(const element of allcomment){
+
         element.addEventListener("click",(e)=>{
-            e.target.parentNode.removeChild(element);
+
+             e.target.parentNode.removeChild(element);
+             
         })
-     }
+    }
 
-     
-     
-
-
-})
+    
+});
 
 // const handlesearch=(event)=>{
 //     console.log("Hello Raju");
 // }
+
+
+// api use :
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(res=>res.json())
+.then(data=>{
+    display(data);
+})
+.catch(err=>{
+    console.log(err);
+})
+
+const display=(userdata)=>{
+
+    const container=document.getElementById("user-data-container");
+
+
+    userdata.forEach(user=>{
+        const div=document.createElement("div");
+        div.classList.add("user");
+        div.innerHTML=`
+        <h1> title</h1>
+        <p>details<p/>
+        <button>btn</button>
+        
+        `
+        container.appendChild(div)
+
+    })
+
+}
