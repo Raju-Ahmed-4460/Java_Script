@@ -4,7 +4,7 @@
 }
 
 .card-container{
-    width: 40%;
+    width: 60%;
     box-shadow: 4px 4px 8px gray;
     margin: auto;
     text-align: center;
@@ -14,8 +14,20 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 100%;
+    width:100%;
     gap: 15px;
     margin: auto;
     text-align: center;
+}
+
+.card{
+    border: 5px gray solid;
+    padding: 10px;
+}
+.card-img{
+    width: 300px;
+}
+.cart-info{
+    display: flex;
+    justify-content: space-around;
 }
